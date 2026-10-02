@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contador"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/butIncrementa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incrementar"
+        app:layout_constraintTop_toBottomOf="@id/textContador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="incrementaContador"
+        />
+
+    <Button
+        android:id="@+id/butDecrementa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrementar"
+        app:layout_constraintTop_toBottomOf="@id/butIncrementa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="decrementaContador"/>
+
+    <Button
+        android:id="@+id/butResetear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resetear"
+        app:layout_constraintTop_toBottomOf="@id/butDecrementa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="resetearContador"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
