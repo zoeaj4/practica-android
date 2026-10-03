@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">03-Rocks</string>
+
+    <string name="buttJugar">Play</string>
+    <string name="buttConfig">Configuration</string>
+    <string name="buttSalir">Exit</string>
+    <string name="buttInfo">About</string>
+
+</resources>
