@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
     }
 
     public void mostrarContador(){
-        TextView textoResultado = (TextView) findViewById(R.id.textContador);
-        textoResultado.setText("Contador: " + contador);
+        TextView textoResultado = (TextView) findViewById(R.id.numContador);
+        textoResultado.setText("" + contador);
     }
 }

@@ -1,53 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textContador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contador"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Contador arriba -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
 
-    <Button
-        android:id="@+id/butIncrementa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Incrementar"
-        app:layout_constraintTop_toBottomOf="@id/textContador"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="incrementaContador"
-        />
+        <TextView
+            android:id="@+id/tituloTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contador:"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/butDecrementa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decrementar"
-        app:layout_constraintTop_toBottomOf="@id/butIncrementa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="decrementaContador"/>
+        <TextView
+            android:id="@+id/numContador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="56sp" />
 
-    <Button
-        android:id="@+id/butResetear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resetear"
-        app:layout_constraintTop_toBottomOf="@id/butDecrementa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="resetearContador"/>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Botones + y - en el centro -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
 
+        <Button
+            android:id="@+id/buttIncrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="incrementaContador"
+            android:text="+"
+            android:textSize="100dp" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="2dp"/>
+
+        <Button
+            android:id="@+id/buttDecrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decrementaContador"
+            android:text="-"
+            android:textSize="100dp" />
+
+    </LinearLayout>
+
+    <!-- Botón Resetear abajo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="bottom|center_horizontal">
+
+        <Button
+            android:id="@+id/buttResetear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resetear"
+            android:onClick="resetearContador" />
+
+    </LinearLayout>
+
+</LinearLayout>
