@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, InfoActivity.class);
         startActivity(i);
     }
+
+    public void ejecutarSalir (View view){
+        finish();
+    }
+
 }
